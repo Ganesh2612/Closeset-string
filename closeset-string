@@ -1,0 +1,14 @@
+class Solution:
+	def shortestDistance(self, s, word1, word2):
+		# code here
+        d1=-1
+        d2=-1
+        ans=100000
+        for i in range(len(s)):
+            if word1==s[i]:
+                d1=i
+            if  word2==s[i]:
+                d2=i
+            if d1!=-1 and d2!=-1:
+                ans=min(ans,abs(d1-d2))
+        return ans 
